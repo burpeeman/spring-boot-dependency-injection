@@ -1,6 +1,7 @@
 package org.amazon.bhadaur.springbootdependencyinjection;
 
 import org.amazon.bhadaur.springbootdependencyinjection.Controller.GreetingsController;
+import org.amazon.bhadaur.springbootdependencyinjection.Controller.MessageController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -25,6 +26,10 @@ public class SpringBootDependencyInjectionApplication {
 
 		GreetingsController greetingsController = (GreetingsController) context.getBean("greetingsController");
 		System.out.println("Getting greetings: " + greetingsController.getGreetings());
+
+		MessageController messageController = (MessageController) context.getBean("messageController");
+
+		System.out.println("and " + messageController.getMessageType());
 	}
 
 }
