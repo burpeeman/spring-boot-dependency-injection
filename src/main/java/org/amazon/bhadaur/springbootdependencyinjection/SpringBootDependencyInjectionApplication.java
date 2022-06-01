@@ -1,6 +1,6 @@
 package org.amazon.bhadaur.springbootdependencyinjection;
 
-import org.amazon.bhadaur.springbootdependencyinjection.Controller.MySampleController;
+import org.amazon.bhadaur.springbootdependencyinjection.Controller.GreetingsController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -22,8 +22,9 @@ public class SpringBootDependencyInjectionApplication {
 		* Created a controller class with @Controller and asked the
 		* application context to provide the instance of that controller
 		* */
-		MySampleController sampleController = (MySampleController) context.getBean("mySampleController");
-		System.out.println(sampleController.sayHello());
+
+		GreetingsController greetingsController = (GreetingsController) context.getBean("greetingsController");
+		System.out.println("Getting greetings: " + greetingsController.getGreetings());
 	}
 
 }
