@@ -1,6 +1,6 @@
 package org.amazon.bhadaur.springbootdependencyinjection.Controller;
 
-import org.amazon.bhadaur.springbootdependencyinjection.Services.MessagingService.Messages;
+import org.amazon.bhadaur.Services.MessagingService.Messages;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 

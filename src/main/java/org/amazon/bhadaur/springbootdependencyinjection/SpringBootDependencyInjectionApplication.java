@@ -5,7 +5,9 @@ import org.amazon.bhadaur.springbootdependencyinjection.Controller.MessageContro
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
+@ComponentScan({"org.amazon.bhadaur.springbootdependencyinjection", "org.amazon.bhadaur.Services", "org.amazon.bhadaur.GreetingsRepository"})
 @SpringBootApplication
 public class SpringBootDependencyInjectionApplication {
 

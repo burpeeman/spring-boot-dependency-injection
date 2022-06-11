@@ -1,6 +1,6 @@
 package org.amazon.bhadaur.springbootdependencyinjection.Controller;
 
-import org.amazon.bhadaur.springbootdependencyinjection.Services.GreetingsService.Greetings;
+import org.amazon.bhadaur.Services.GreetingsService.Greetings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -11,7 +11,7 @@ public class GreetingsController {
     private final Greetings greetings;
 
     @Autowired
-    public GreetingsController(@Qualifier("Greetings") Greetings greetings){
+    public GreetingsController(Greetings greetings){
         this.greetings = greetings;
     }
 

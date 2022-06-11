@@ -1,8 +1,5 @@
-package org.amazon.bhadaur.springbootdependencyinjection.Services.MessagingService;
+package org.amazon.bhadaur.Services.MessagingService;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class WhatsAppMessage implements Messages{
     @Override
     public String messageType() {
