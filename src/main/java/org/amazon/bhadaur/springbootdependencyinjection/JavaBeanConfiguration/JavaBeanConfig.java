@@ -10,14 +10,19 @@ import org.amazon.bhadaur.Services.GreetingsService.Greetings;
 import org.amazon.bhadaur.Services.GreetingsService.HindiGreetings;
 import org.amazon.bhadaur.Services.MessagingService.MessageServiceFactory;
 import org.amazon.bhadaur.Services.MessagingService.Messages;
+import org.amazon.bhadaur.springbootdependencyinjection.Message;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Profile;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.*;
 
+@PropertySource("classpath:messages.properties")
 @Configuration
 public class JavaBeanConfig {
+
+    @Bean
+    public Message message(@Value("${bhadaur.message}") String message){
+        return new Message(message);
+    }
 
     @Bean("English")
     @Profile("EN-Queue")

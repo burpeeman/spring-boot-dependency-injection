@@ -31,7 +31,7 @@ public class SpringBootDependencyInjectionApplication {
 
 		MessageController messageController = (MessageController) context.getBean("messageController");
 
-		System.out.println("and " + messageController.getMessageType());
+		System.out.println("and " + messageController.getMessage());
 	}
 
 }
